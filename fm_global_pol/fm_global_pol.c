@@ -149,56 +149,18 @@ op_global_pol_main(
 	                                        	"op_global_pol_main inside status value 1", in_flistp);
                                                                                     
         
-/* call the opcode 
- *
- */  
- 
-  /*
-             file = fopen("sample.txt", "r");
-    if (file == NULL) {
-        perror("Error opening file");
-        return EXIT_FAILURE;
-    }
 
-    // Read the file line by line
-      while (fscanf(file, "%s %d", name, &value) != EOF) {
-    
-          PIN_ERR_LOG_FLIST(PIN_ERR_LEVEL_DEBUG,
-	                                        	"op_global_pol_main inside status value 1", name);
-        // Print the name and value
-      //  printf("Name: %s, Value: %d\n", name, value);
-       }
- */
-       /*     file = fopen("sample.txt", "r");
-             if (file == NULL) {
-              printf("Could not open file.\n");
-             return 1;
-           }
-
-    // Read each line and extract the name and value
-             while (fgets(line, sizeof(line), file)) {
-        // Extract the name and value
-             name = strtok(line, " ");
-               if (name != NULL) {
-            
-              PIN_ERR_LOG_FLIST(PIN_ERR_LEVEL_DEBUG,
-	                                        	"op_global_pol_main inside status value 1", name);
-               printf("Name: %s, Value: %d\n", name);
-            }
-       }
-           
-    // Close the file
             
          /*     fm_fw_search_opcode(ctxp, op_value, in_flistp, &search_rflistp, ebufp);
                 t1_1flistp = (void *)PIN_FLIST_ELEM_GET(search_rflistp, PIN_FLD_RESULTS, PIN_ELEMID_ANY, 0, ebufp );
                   op_resultp = (void *)PIN_FLIST_ELEM_GET(t1_1flistp, PIN_FLD_OP_INFO, 0, 1, ebufp );
                   opcode_number =  PIN_FLIST_FLD_GET(op_resultp, PIN_FLD_OPCODE_VALUE, 0, ebufp); */
                   
-           // 	sea_flistp = PIN_FLIST_CREATE(ebufp);
+           
            
            sea_flistp = PIN_FLIST_COPY(in_flistp, ebufp);
              
-       //    sea_flistp = PIN_FLIST_CONCAT(in_flistp, search_rflistp, ebufp );
+   
 
         
       
@@ -214,7 +176,7 @@ op_global_pol_main(
           
 		      *ret_flistpp = create_rflistp;
                 
-          //     fclose(file);
+      
 
         
          }
