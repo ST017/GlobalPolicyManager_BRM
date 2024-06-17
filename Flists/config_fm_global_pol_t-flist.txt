@@ -1,0 +1,44 @@
+
+0 PIN_FLD_POID           POID [0] 0.0.0.1 /config/fm_global_pol -1 0
+0 PIN_FLD_ACCOUNT_OBJ    POID [0] 0.0.0.1 /account 1 0
+0 PIN_FLD_DESCR           STR [0] ""
+0 PIN_FLD_HOSTNAME        STR [0] "-"
+0 PIN_FLD_NAME            STR [0] "fm_global_pol"
+0 PIN_FLD_PROGRAM_NAME    STR [0] "-"
+0 PIN_FLD_VALUE           STR [0] ""
+0 PIN_FLD_VERSION         STR [0] "2"
+0 PIN_FLD_OP_INFO     ARRAY [0] allocated 20, used 8
+1 PIN_FLD_OPCODE_VALUE INT [0] 251
+1 PIN_FLD_STATUS_VALUE INT [0] 1
+1 PIN_FLD_FUNCTION_NAME STR [0] "op_cust_pol_pre_commit"
+1 PIN_FLD_SHARED_OBJECT STR [0] "fm_cust_pol.so"
+
+
+
+
+0 PIN_FLD_POID           POID [0] 0.0.0.1 /config/fm_global_pol -1 0
+0 PIN_FLD_ACCOUNT_OBJ    POID [0] 0.0.0.1 /account 1 0
+0 PIN_FLD_DESCR           STR [0] ""
+0 PIN_FLD_HOSTNAME        STR [0] "-"
+0 PIN_FLD_NAME            STR [0] "fm_global_pol"
+0 PIN_FLD_PROGRAM_NAME    STR [0] "-"
+0 PIN_FLD_VALUE           STR [0] ""
+0 PIN_FLD_VERSION         STR [0] "2"
+0 PIN_FLD_OP_INFO     ARRAY [0] allocated 20, used 8
+1 PIN_FLD_OPCODE_VALUE INT [0] 252
+1 PIN_FLD_STATUS_VALUE INT [0] 0
+1 PIN_FLD_FUNCTION_NAME STR [0] "op_cust_pol_post_commit"
+1 PIN_FLD_SHARED_OBJECT STR [0] "fm_cust_pol.so"
+
+
+use PCM_OP_CREATE_OBJ 
+
+XOP 1 0 1
+
+
+
+
+
+
+
+

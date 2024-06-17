@@ -1,0 +1,162 @@
+
+#=======================================
+#  Field PIN_FLD_OP_INFO
+#=======================================
+
+ARRAY PIN_FLD_OP_INFO {
+
+	ID = 11119;
+}
+
+
+#=======================================
+#  Field PIN_FLD_OPCODE_VALUE
+#=======================================
+
+INT PIN_FLD_OPCODE_VALUE {
+
+	ID = 11117;
+}
+
+
+#=======================================
+#  Field PIN_FLD_STATUS_VALUE
+#=======================================
+
+INT PIN_FLD_STATUS_VALUE {
+
+	ID = 10022;
+}
+
+#=======================================
+#  Field PIN_FLD_FUNCTION_NAME
+#=======================================
+
+STRING PIN_FLD_FUNCTION_NAME {
+
+	ID = 111120;
+}
+
+#=======================================
+#  Field PIN_FLD_FUNCTION_NAME
+#=======================================
+
+STRING PIN_FLD_SHARED_OBJECT {
+
+	ID = 111121;
+}
+
+
+#=======================================
+#  Storable Class /config/fm_global_pol
+#=======================================
+
+STORABLE CLASS /config/fm_global_pol {
+
+	READ_ACCESS = "Self";
+	WRITE_ACCESS = "Self";
+	IS_PARTITIONED = "0";
+
+	#===================
+	#  Fields 
+	#===================
+
+	ARRAY PIN_FLD_OP_INFO {
+
+		ORDER = 0;
+		AUDITABLE = 0;
+		ENCRYPTABLE = 0;
+		SERIALIZABLE = 0;
+
+		#===================
+		#  Fields 
+		#===================
+
+		INT PIN_FLD_OPCODE_VALUE {
+
+			ORDER = 0;
+			CREATE = Optional;
+			MODIFY = Writeable;
+			AUDITABLE = 0;
+			ENCRYPTABLE = 0;
+			SERIALIZABLE = 0;
+		}
+
+		INT PIN_FLD_STATUS_VALUE {
+
+			ORDER = 0;
+			CREATE = Optional;
+			MODIFY = Writeable;
+			AUDITABLE = 0;
+			ENCRYPTABLE = 0;
+			SERIALIZABLE = 0;
+		}
+    
+ 		 STRING PIN_FLD_FUNCTION_NAME {
+    
+		        ORDER = 0;
+			CREATE = Optional;
+			MODIFY = Writeable;
+			AUDITABLE = 0;
+			ENCRYPTABLE = 0;
+			SERIALIZABLE = 0;
+   		 }
+        
+        
+     STRING PIN_FLD_SHARED_OBJECT {
+    
+		        ORDER = 0;
+			CREATE = Optional;
+			MODIFY = Writeable;
+			AUDITABLE = 0;
+			ENCRYPTABLE = 0;
+			SERIALIZABLE = 0;
+   		 }   
+	}
+
+}
+
+
+#=======================================
+#  Storable Class /config/fm_global_pol
+#=======================================
+
+STORABLE CLASS /config/fm_global_pol IMPLEMENTATION ORACLE7 {
+
+
+	#===================
+	#  Fields 
+	#===================
+
+	ARRAY PIN_FLD_OP_INFO {
+
+		SQL_TABLE = "config_fm_global_pol_t";
+
+		#===================
+		#  Fields 
+		#===================
+
+		INT PIN_FLD_OPCODE_VALUE {
+
+			SQL_COLUMN = "opcode_number";
+		}
+
+		INT PIN_FLD_STATUS_VALUE {
+
+			SQL_COLUMN = "status_value";
+		}
+   
+ 		 STRING PIN_FLD_FUNCTION_NAME {
+     
+      			 SQL_COLUMN = "function_name";
+    		 }
+    
+    
+    STRING PIN_FLD_SHARED_OBJECT {
+    
+        SQL_COLUMN = "shared_object";
+      }
+	}
+
+}
+
